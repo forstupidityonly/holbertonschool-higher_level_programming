@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 for j in range(97, 123):
-    if j == 'q' or j == 'e':
+    if j == 101 or j == 113:
         continue
     else:
         print("{:c}".format(j), end='')
