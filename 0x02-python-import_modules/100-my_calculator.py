@@ -18,4 +18,4 @@ elif operator == "/":
     print("{} / {} = {}".format(a, b, div(a, b)))
 else:
     print("Unknown operator. Available operators: +, -, * and /")
-    elit(1)
+    exit(1)
