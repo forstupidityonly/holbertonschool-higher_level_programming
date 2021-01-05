@@ -1,16 +1,25 @@
 #!/usr/bin/python3
+"""my square"""
 class Square:
+    """def a square"""
     def __init__(self, size=0, position=(0, 0)):
+        """
+            set size and pos
+        """
         self.__size = size
         self.__position = position
 
+    """def area"""
     def area(self):
         return self.__size**2
-
+    """get size"""
     @property
     def size(self):
         return self.__size
-
+    """
+       set size
+       raise int and 0 checks
+    """
     @size.setter
     def size(self, value):
         self.__size = value
@@ -18,11 +27,13 @@ class Square:
             raise TypeError("size must be in integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-
+    """get pos"""
     @property
     def position(self, value):
         return self.__position
-
+    """set pos
+       tuple raises
+    """
     @position.setter
     def position(self, value):
         self.__postition = value
@@ -32,7 +43,7 @@ class Square:
             raise TypeError("position must be a tulpe of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tulpe of 2 positive integers")
-
+    """to print"""
     def my_print(self):
         if self.__size == 0:
             print("")

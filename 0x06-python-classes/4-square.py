@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+"""my square mod"""
 class Square:
+    """def the squaare"""
     def __init__(self, size=0):
+        """
+            make it
+            make area
+            use propertey to get size
+            use serrter to set size
+        """
         self.__size = size
 
     def area(self):
