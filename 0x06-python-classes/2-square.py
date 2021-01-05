@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """my square mod"""
+
+
 class Square:
     """def a square"""
+
     def __init__(self, size=0):
         """
             make square
