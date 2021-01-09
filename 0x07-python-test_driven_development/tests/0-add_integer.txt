@@ -1,0 +1,72 @@
+the ''0-add_integer'' module
+============================
+
+using ''add_integer''
+---------------------
+
+First import ''add_integer'':
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test: regular:
+
+    >>> add_integer(1, 2)
+    3
+
+test: pos (a) neg (b):
+
+    >>> add_integer(1, -2)
+    -1
+
+test: pos (b) neg (a):
+
+    >>> add_integer(-1, 2)
+    1
+
+test: give nothing
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test: only send 1
+
+    >>> add_integer(2)
+    100
+
+test:  two floats
+
+    >>> add_integer(2.5, 2.5)
+    4
+
+test: one float
+
+    >>> add_integer(2.92)
+    100
+
+test: large numbers
+
+    >>> add_integer(1000000000000, 1000006000000)
+    2000006000000
+
+test: chars in b
+
+    >>> add_integer(1, "holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+test: chars in a
+
+    >>> add_integer("holberton", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+test: send nothing 
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'

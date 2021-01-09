@@ -1,0 +1,36 @@
+the ''5-text_indentation'' module
+===============================
+
+    >>> text = __import__('5-text_indentation').text_indentation
+
+test: reg 
+    >>> text()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+test: int
+    >>>test(4)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    test: tesing '.', '?', and ':' with no space after them
+::
+    >>> text_indentation("""Hello my name is bob : I am five yea:rs old. \
+        ... How old are you? Do you have a favi.orite color? Have a go:od day!""")
+    Hello my name is bob :
+    <BLANKLINE>
+    I am five yea:
+    <BLANKLINE>
+    rs old.
+    <BLANKLINE>
+    How old are you?
+    <BLANKLINE>
+    Do you have a favi.
+    <BLANKLINE>
+    orite color?
+    <BLANKLINE>
+    Have a go:
+    <BLANKLINE>
+    od day!

@@ -1,0 +1,23 @@
+the ''4-print_square'' module
+===============================
+
+    >>> print_square = __import__('4-print_quare').print_square
+
+test: reg 
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+test: float
+    >>> print_square(4.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+test: more than one
+    >>> print_square(1, 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() takes one positional argument but two were given

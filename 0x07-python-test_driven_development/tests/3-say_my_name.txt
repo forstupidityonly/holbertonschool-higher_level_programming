@@ -1,0 +1,30 @@
+the ''2-matrix_divided'' module
+===============================
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+test: reg 
+    >>> say_my_name("Hank", "Hill")
+    My name is Hank Hill
+
+test: num
+    >>> say_my_name("Bobby", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+test: num
+    >>> say_my_name(2, "lou'ann")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+test: nothing
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+test: just one
+    >>> say_my_name("Peggy", )
+    My name is Peggy
