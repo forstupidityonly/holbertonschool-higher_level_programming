@@ -1,0 +1,14 @@
+the ''2-rectangle.py'' module
+=============================
+
+    >>> Rectangle = __import__('2-rectangle').Rectangle
+
+test: reg use:
+    >>> my_rectangle = Rectangle(2, 4)
+    >>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    Area: 8 - Perimeter: 12
+
+test: send nothin
+    >>> my_rectangle = Rectangle()
+    >>> print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+    Area: 0 - Perimeter: 0

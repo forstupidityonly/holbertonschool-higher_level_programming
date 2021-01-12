@@ -1,0 +1,19 @@
+the ''1-rectangle.py'' module
+=============================
+
+    >>> Rectangle = __import__('1-rectangle').Rectangle
+
+test: reg use:
+    >>> my_rectangle = Rectangle(2, 4)
+    >>> print(my_rectangle.__dict__)
+    {'_Rectangle__width': 2, '_Rectangle__height': 4}
+
+test: reg use2:
+    >>> my_rectangle2 = Rectangle(4, 2)
+    >>> print(my_rectangle2.__dict__)
+    {'_Rectangle__width': 4, '_Rectangle__height': 2}
+
+test: nothing
+    >>> my_rectangle3 = Rectangle()
+    >>> print(my_rectangle3.__dict__)
+    {'_Rectangle__width': 0, '_Rectangle__height': 0}
