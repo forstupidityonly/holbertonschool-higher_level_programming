@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """for the checker"""
+
+
 def save_to_json_file(my_obj, filename):
     """for the checker"""
     import json

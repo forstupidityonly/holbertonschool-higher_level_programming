@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """for the checker"""
+
+
 def load_from_json_file(filename):
     """for the checker"""
     import json
