@@ -4,8 +4,4 @@
 
 def inherits_from(obj, a_class):
     """stuff for checker"""
-    if(isinstance(type(obj), a_class)):
-        return(True)
-    elif(not isinstance(obj, a_class)):
-        return(True)
-    return(False)
+    return(isinstance(obj, a_class) and type(obj) != a_class)
