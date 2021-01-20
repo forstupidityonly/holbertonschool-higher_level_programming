@@ -3,5 +3,5 @@
 
 def read_file(filename=""):
     """for the checker"""
-    with open(filename, encoding="UTF-8") as file:
-        print(file.read, end="")
+    with open(filename, "r") as file:
+        print(file.read(), end="")
