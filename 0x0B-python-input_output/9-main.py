@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""for the checker"""
 Student = __import__('9-student').Student
 
 students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
