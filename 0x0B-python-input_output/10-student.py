@@ -11,6 +11,13 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """for the checker"""
-        return self.__dict__
+        if not isinstance(attrs, list) or len(attrs) < 1:
+            return self.__dict__
+        for i in attrs:
+            if not isinstance(i, str):
+                return self.__dict__
+        return {
+            name: value for name,
+            value in self.__dict__.items() if name in attrs}
