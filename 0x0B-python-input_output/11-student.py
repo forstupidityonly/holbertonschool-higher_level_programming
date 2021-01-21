@@ -13,7 +13,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """for the checker"""
-        if not isinstance(attrs, list) or len(attrs) < 1:
+        if not isinstance(attrs, list):
             return self.__dict__
         for i in attrs:
             if not isinstance(i, str):
