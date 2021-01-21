@@ -18,6 +18,8 @@ class Student:
         for i in attrs:
             if not isinstance(i, str):
                 return self.__dict__
-        return {
-            name: value for name,
-            value in self.__dict__.items() if name in attrs}
+        my_dict = {}
+        for itr in atters:
+            if itr in self.__dict__:
+                my_dict.update({itr: self.__dict__[itr]})
+    return my_dict
