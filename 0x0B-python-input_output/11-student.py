@@ -1,5 +1,5 @@
 #!/bin/usr/python3
-"""for the checker"""
+"""for the chEcker"""
 
 
 class Student:
