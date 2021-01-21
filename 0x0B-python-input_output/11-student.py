@@ -1,5 +1,5 @@
-#!/bin/usr/python3
-"""for the chEcker"""
+#!/usr/bin/python3
+"""for the checker"""
 
 
 class Student:
@@ -18,11 +18,18 @@ class Student:
         for i in attrs:
             if not isinstance(i, str):
                 return self.__dict__
-        return {
-            name: value for name,
-            value in self.__dict__.items() if name in attrs}
+        my_dict = {}
+        for itr in attrs:
+            if itr in self.__dict__:
+                my_dict.update({itr: self.__dict__[itr]})
+        return my_dict
 
     def reload_from_json(self, json):
         """for the checker"""
         for i in json:
-            self.__dict__.update({i: json[i]})
+            if i == "first_name":
+                self.first_name = json[i]
+            if i == "last_name":
+                self.last_name = json[i]
+            if i == "age":
+                self.age= json[i]
