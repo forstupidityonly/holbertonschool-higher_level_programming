@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ basic getter and setter with no validation"""
 from models.base import Base
+
+
 class Rectangle(Base):
     """bonze rectangle class"""
 
@@ -73,27 +75,53 @@ class Rectangle(Base):
             self.__y = value
 
     def area(self):
+        """always a good function"""
         return self.width * self.height
 
     def display(self):
+        """visulization"""
         out = (" " * self.x + "#" * self.width) + "\n"
         out *= self.height
         out = "\n" * self.y + out
         print(out, end="")
 
     def __str__(self):
+        """overide the str function"""
         var = "[Rectangle] ({}) {}/{} - {}/{}"
         return var.format(self.id, self.x, self.y, self.width, self.height)
-        
-    def update(self, *args):
+
+    def update(self, *args, **kwargs):
+        """update all the vals for args and kwargs"""
         var = len(args)
-        if var > 0:
-            self.id = args[0]
-        if var > 1:
-            self.width = args[1]
-        if var > 2:
-            self.height = args[2]
-        if var > 3:
-            self.x = args[3]
-        if var > 4:
-            self.y = args[4]
+        if len(args) != 0:
+            if var > 0:
+                self.id = args[0]
+            if var > 1:
+                self.width = args[1]
+            if var > 2:
+                self.height = args[2]
+            if var > 3:
+                self.x = args[3]
+            if var > 4:
+                self.y = args[4]
+        else:
+            for itr in kwargs:
+                if itr == "id":
+                    self.id = kwargs[itr]
+                if itr == "width":
+                    self.width = kwargs[itr]
+                if itr == "height":
+                    self.height = kwargs[itr]
+                if itr == "x":
+                    self.x = kwargs[itr]
+                if itr == "y":
+                    self.y = kwargs[itr]
+
+    def to_dictionary(self):
+        """object to dict"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y}
