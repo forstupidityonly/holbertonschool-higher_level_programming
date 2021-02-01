@@ -1,0 +1,3 @@
+#!/bin/usr/python3
+def pascal_triangle(n):
+    
