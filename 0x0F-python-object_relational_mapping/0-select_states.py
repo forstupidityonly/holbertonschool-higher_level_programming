@@ -12,13 +12,13 @@ if __name__ == "__main__":
         cursor gives ability to have multiple seperate working environments through
         the same connection to the database
     """
-cur = db.cursor()
-cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-rows = cur.fetchall()
-for row in rows:
-    print (row)
-    """
-        close all open cursors, and close all open database connections
-    """
-cur.close()
-db.close()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    rows = cur.fetchall()
+    for row in rows:
+        print (row)
+        """
+            close all open cursors, and close all open database connections
+        """
+    cur.close()
+    db.close()
