@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-    """[summary]
+"""[python files need docstrings and i think length is checked]
     """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
-    """[summary]
+    """[python files need docstrings and i think length is checked]
 
     Args:
         Base ([type]): [description]
