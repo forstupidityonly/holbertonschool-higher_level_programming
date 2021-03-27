@@ -9,17 +9,17 @@ if __name__ == "__main__":
                          passwd=argv[2], db=argv[3])
 
     """
-        cursor gives ability to have multiple seperate working environments through
-        the same connection to the database
+        cursor gives ability to have multiple seperate working environments
+        through the same connection to the database
     """
-cur = db.cursor()
-cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-rows = cur.fetchall()
-for row in rows:
-    if row[1].startswith("N"):
-        print (row)
-    """
-        close all open cursors, and close all open database connections
-    """
-cur.close()
-db.close()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    rows = cur.fetchall()
+    for row in rows:
+        if row[1].startswith("N"):
+            print(row)
+        """
+            close all open cursors, and close all open database connections
+        """
+    cur.close()
+    db.close()
