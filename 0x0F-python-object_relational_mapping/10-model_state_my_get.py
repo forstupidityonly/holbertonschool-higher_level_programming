@@ -14,10 +14,10 @@ if __name__ == "__main__":
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    states = session.query(State).order_by(State.id)
+    states = Session.query(State).order_by(State.id)
     for i in states:
         if argv[4] == i.name:
             print(str(i.id))
             exit()
-    print("Not Found")
-    session.close()
+    print("Not found")
+    Session.close()
