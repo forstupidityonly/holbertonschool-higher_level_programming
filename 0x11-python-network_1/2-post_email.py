@@ -8,13 +8,14 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    url = argv[1]
-    email = argv[2]
-    values = {"email": email}
-    data = urllib.parse.urlencode(values)
-    data = query_string.encode("ascii")
+    if (argv[1] is not None and argv[2] is not None):
+        url = argv[1]
+        email = argv[2]
+        values = {"email": email}
+        data = urllib.parse.urlencode(values)
+        data = query_string.encode("ascii")
 
-    with urllib.request.urlopen(url, data) as response:
-    response_text = response.read()
-    response_text = response_text.decode("UTF-8")
-    print(response_text)
+        with urllib.request.urlopen(url, data) as response:
+            response_text = response.read()
+            response_text = response_text.decode("UTF-8")
+            print(response_text)
