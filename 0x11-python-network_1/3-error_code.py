@@ -1,4 +1,4 @@
-#!/usr/bin/pyhon3
+#!/usr/bin/python3
 """comment"""
 import urllib.error
 import urllib.request 
