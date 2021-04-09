@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """comment"""
 import urllib.error
-import urllib.request 
+import urllib.request
 from sys import argv
 
 
