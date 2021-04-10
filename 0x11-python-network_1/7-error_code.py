@@ -8,6 +8,6 @@ if __name__ == '__main__':
     r = requests.get(argv[1])
     status = r.status_code
     if status >= 400:
-        print("Error cde: {}".format(status))
+        print("Error code: {}".format(status))
     else:
         print(r.text)
