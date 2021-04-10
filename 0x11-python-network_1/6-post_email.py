@@ -9,6 +9,6 @@ if __name__ == "__main__":
         url = argv[1]
         email = argv[2]
         data = {'email': email}
-        info = requests.cost(url, data)
+        info = requests.post(url, data)
         value = info.text
         print(str(value))
