@@ -1,6 +1,7 @@
 #!/usr/bin/node
 //reads a file
 const fs = require('fs');
-fs.readDile()process.arg[2], 'utf8', (error, data) => {
-    console.log(error || data);
+fs.readFile()process.argv[2], 'utf8', (error, data) => {
+    if (err) console.log(err);
+    else console.log(data);
 });
