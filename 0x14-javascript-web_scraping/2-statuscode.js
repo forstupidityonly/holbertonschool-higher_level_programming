@@ -3,11 +3,11 @@
 const request = require('request');
 const myArgs = process.argv.slice(2);
 const opt = {
-    url:myArgs[0],
-    method: 'GET',
-    headers: {
-       'Accept-Charset': 'utf8'
-    }
+  url:myArgs[0],
+  method: 'GET',
+  headers: {
+    'Accept-Charset': 'utf8'
+  }
 };
 request(opt, (error, response) => {
   if (error) {
