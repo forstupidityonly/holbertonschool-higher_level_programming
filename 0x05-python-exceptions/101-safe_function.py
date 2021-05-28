@@ -5,4 +5,4 @@ def safe_function(fct, *args):
         return fct(*args)
     except Exception as ex:
         sys.stderr.write("Exception: {}\n".format(ex))
-        retunr None
+        return None
