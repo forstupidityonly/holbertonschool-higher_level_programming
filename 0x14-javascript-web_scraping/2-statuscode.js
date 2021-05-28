@@ -3,7 +3,7 @@
 const request = require('request');
 const myArgs = process.argv.slice(2);
 const opt = {
-  url:myArgs[0],
+  url: myArgs[0],
   method: 'GET',
   headers: {
     'Accept-Charset': 'utf8'
