@@ -3,7 +3,7 @@
 const request = require('request');
 request(process.argv[2], function (err, resp, bod) {
     if (err) {
-      console.log(arr);
+      console.log(err);
     } else {
       const todos = JSON.parse(bod);
       const comptask = {};
@@ -14,5 +14,6 @@ request(process.argv[2], function (err, resp, bod) {
         comptask[todo.userId] += 1;
       }
     });
+    console.log(comptask);
   }
 });
